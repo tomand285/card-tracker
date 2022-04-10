@@ -1,5 +1,7 @@
+const fs = require('fs')
 var wtj = require('website-to-json')
 const open = require('open');
+const currDate = (new Date()).toISOString().replace(/:/g, '_')
 
 async function cardFinder(num) {
     return new Promise((resolve, reject) => {
@@ -68,8 +70,17 @@ function missingCard(num) {
     let price5 = 0;
     let limit5 = 100;
 
+    let writer = async(log) => {
+        console.log(log)
+        try {
+            fs.writeFileSync(`neo-${currDate}.txt`, log + "\n", { flag: 'a+' })
+        } catch (err) {
+            console.error(err)
+        }
+    }
+
     let lookAt = async(card) => {
-        console.log(`ID: ${card.id}, Card: ${card.url}, Price: ${card.Price}`);
+        await writer(`ID: ${card.id}, Card: ${card.url}, Price: ${card.Price}`);
         //await open(card.TCGPlayer)
     }
 
@@ -104,16 +115,16 @@ function missingCard(num) {
 
     }
 
-    console.log(`Total number of cards left: ${total}`)
-    console.log(`Total price of all cards left: $${totalPrice.toFixed( 2 )}`)
-    console.log(`Number of cards under $${limit}: ${amount}`)
-    console.log(`Total price of ${amount} cards under $${limit}: $${price.toFixed( 2 )}`)
-    console.log(`Number of cards under $${limit2}: ${amount2}`)
-    console.log(`Total price of ${amount2} cards under $${limit2}: $${price2.toFixed( 2 )}`)
-    console.log(`Number of cards under $${limit3}: ${amount3}`)
-    console.log(`Total price of ${amount3} cards under $${limit3}: $${price3.toFixed( 2 )}`)
-    console.log(`Number of cards under $${limit4}: ${amount4}`)
-    console.log(`Total price of ${amount4} cards under $${limit4}: $${price4.toFixed( 2 )}`)
-    console.log(`Number of cards under $${limit5}: ${amount5}`)
-    console.log(`Total price of ${amount5} cards under $${limit5}: $${price5.toFixed( 2 )}`)
+    await writer(`Total number of cards left: ${total}`)
+    await writer(`Total price of all cards left: $${totalPrice.toFixed( 2 )}`)
+    await writer(`Number of cards under $${limit}: ${amount}`)
+    await writer(`Total price of ${amount} cards under $${limit}: $${price.toFixed( 2 )}`)
+    await writer(`Number of cards under $${limit2}: ${amount2}`)
+    await writer(`Total price of ${amount2} cards under $${limit2}: $${price2.toFixed( 2 )}`)
+    await writer(`Number of cards under $${limit3}: ${amount3}`)
+    await writer(`Total price of ${amount3} cards under $${limit3}: $${price3.toFixed( 2 )}`)
+    await writer(`Number of cards under $${limit4}: ${amount4}`)
+    await writer(`Total price of ${amount4} cards under $${limit4}: $${price4.toFixed( 2 )}`)
+    await writer(`Number of cards under $${limit5}: ${amount5}`)
+    await writer(`Total price of ${amount5} cards under $${limit5}: $${price5.toFixed( 2 )}`)
 })()
