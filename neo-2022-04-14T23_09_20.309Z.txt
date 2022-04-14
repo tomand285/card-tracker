@@ -1,0 +1,47 @@
+ID: 355, Card: https://scryfall.com/card/neo/355/inventive-iteration-living-breakthrough, Price: 0.58
+ID: 358, Card: https://scryfall.com/card/neo/358/the-dragon-kami-reborn-dragon-kamis-egg, Price: 0.49
+ID: 360, Card: https://scryfall.com/card/neo/360/teachings-of-the-kirin-kirin-touched-orochi, Price: 0.31
+ID: 366, Card: https://scryfall.com/card/neo/366/invoke-justice, Price: 0.72
+ID: 370, Card: https://scryfall.com/card/neo/370/invoke-the-winds, Price: 0.66
+ID: 381, Card: https://scryfall.com/card/neo/381/mukotai-soulripper, Price: 0.68
+ID: 382, Card: https://scryfall.com/card/neo/382/soul-transfer, Price: 0.68
+ID: 390, Card: https://scryfall.com/card/neo/390/invoke-the-ancients, Price: 0.35
+ID: 393, Card: https://scryfall.com/card/neo/393/march-of-burgeoning-life, Price: 0.38
+ID: 396, Card: https://scryfall.com/card/neo/396/eiganjo-uprising, Price: 0.63
+ID: 434, Card: https://scryfall.com/card/neo/434/brilliant-restoration, Price: 0.75
+ID: 435, Card: https://scryfall.com/card/neo/435/cloudsteel-kirin, Price: 0.58
+ID: 443, Card: https://scryfall.com/card/neo/443/inventive-iteration-living-breakthrough, Price: 0.39
+ID: 444, Card: https://scryfall.com/card/neo/444/invoke-the-winds, Price: 0.26
+ID: 448, Card: https://scryfall.com/card/neo/448/mindlink-mech, Price: 0.43
+ID: 454, Card: https://scryfall.com/card/neo/454/hidetsugu-devouring-chaos, Price: 0.69
+ID: 455, Card: https://scryfall.com/card/neo/455/invoke-despair, Price: 0.91
+ID: 458, Card: https://scryfall.com/card/neo/458/mukotai-soulripper, Price: 0.4
+ID: 460, Card: https://scryfall.com/card/neo/460/soul-transfer, Price: 0.37
+ID: 461, Card: https://scryfall.com/card/neo/461/tatsunari-toad-rider, Price: 0.98
+ID: 462, Card: https://scryfall.com/card/neo/462/tribute-to-horobi-echo-of-deaths-wail, Price: 0.29
+ID: 467, Card: https://scryfall.com/card/neo/467/invoke-calamity, Price: 0.85
+ID: 469, Card: https://scryfall.com/card/neo/469/march-of-reckless-joy, Price: 0.95
+ID: 470, Card: https://scryfall.com/card/neo/470/ogre-head-helm, Price: 0.26
+ID: 472, Card: https://scryfall.com/card/neo/472/thundering-raiju, Price: 0.46
+ID: 476, Card: https://scryfall.com/card/neo/476/kami-of-transience, Price: 0.89
+ID: 479, Card: https://scryfall.com/card/neo/479/march-of-burgeoning-life, Price: 0.37
+ID: 481, Card: https://scryfall.com/card/neo/481/spring-leaf-avenger, Price: 0.63
+ID: 482, Card: https://scryfall.com/card/neo/482/teachings-of-the-kirin-kirin-touched-orochi, Price: 0.27
+ID: 484, Card: https://scryfall.com/card/neo/484/eiganjo-uprising, Price: 0.25
+ID: 490, Card: https://scryfall.com/card/neo/490/kotose-the-silent-spider, Price: 0.37
+ID: 491, Card: https://scryfall.com/card/neo/491/raiyuu-storms-edge, Price: 0.6
+ID: 492, Card: https://scryfall.com/card/neo/492/risona-asari-commander, Price: 0.23
+ID: 494, Card: https://scryfall.com/card/neo/494/satsuki-the-living-lore, Price: 0.33
+ID: 500, Card: https://scryfall.com/card/neo/500/surgehacker-mech, Price: 0.47
+Total number of cards left: 135
+Total price of all cards left: $3546.20
+Number of cards under $1: 35
+Total price of 35 cards under $1: $18.46
+Number of cards under $2: 56
+Total price of 56 cards under $2: $48.95
+Number of cards under $3: 68
+Total price of 68 cards under $3: $77.29
+Number of cards under $50: 123
+Total price of 123 cards under $50: $760.12
+Number of cards under $100: 128
+Total price of 128 cards under $100: $1114.78
