@@ -55,13 +55,13 @@ function missingCard(num) {
     let totalPrice = 0;
     let amount = 0;
     let price = 0;
-    let limit = 1; //5
+    let limit = 3; //5
     let amount2 = 0;
     let price2 = 0;
-    let limit2 = 2; //10
+    let limit2 = 4; //10
     let amount3 = 0;
     let price3 = 0;
-    let limit3 = 3; //20
+    let limit3 = 5; //20
     let amount4 = 0;
     let price4 = 0;
     let limit4 = 50;
@@ -80,7 +80,7 @@ function missingCard(num) {
 
     let lookAt = async(card) => {
         await writer(`ID: ${card.id}, Card: ${card.url}, Price: ${card.Price}`);
-        //await open(card.TCGPlayer)
+        await open(card.TCGPlayer)
     }
 
     for (let i = 0; i < total; i++) {
