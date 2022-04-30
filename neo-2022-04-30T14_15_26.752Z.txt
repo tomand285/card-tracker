@@ -1,3 +1,0 @@
-Total number of cards left: 159
-Total priceMin of all cards left: $157.57
-Total priceMx of all cards left: $207.12

@@ -1,3 +1,0 @@
-Total number of cards left: 467
-Total priceMin of all cards left: $NaN
-Total priceMx of all cards left: $NaN
