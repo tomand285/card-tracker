@@ -1,16 +1,26 @@
 {
-    "name": "MTG_Pricer",
+    "name": "mtg-pricer",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node index",
-        "dev": "nodemon index"
+        "start": "npm run need:neo",
+        "dev": "nodemon index --mode need --code neo",
+        "numbers": "node numbers.js",
+        "need:neo": "node index --mode need --code neo",
+        "need:nec": "node index --mode need --code nec",
+        "need:snc": "node index --mode need --code snc",
+        "need:ncc": "node index --mode need --code ncc",
+        "have:neo": "node index --mode have --code neo",
+        "have:nec": "node index --mode have --code nec",
+        "have:snc": "node index --mode have --code snc",
+        "have:ncc": "node index --mode have --code ncc"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "node-flag": "^1.5.1",
         "open": "^8.4.0",
         "website-to-json": "^1.0.22",
         "x-ray": "^2.3.4"

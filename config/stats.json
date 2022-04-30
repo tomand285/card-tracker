@@ -1,0 +1,49 @@
+[{
+        "amount": 0,
+        "priceMin": 0,
+        "priceMax": 0,
+        "limit": 5
+    },
+    {
+        "amount": 0,
+        "priceMin": 0,
+        "priceMax": 0,
+        "limit": 6
+    },
+    {
+        "amount": 0,
+        "priceMin": 0,
+        "priceMax": 0,
+        "limit": 7
+    },
+    {
+        "amount": 0,
+        "priceMin": 0,
+        "priceMax": 0,
+        "limit": 50
+    },
+    {
+        "amount": 0,
+        "priceMin": 0,
+        "priceMax": 0,
+        "limit": 100
+    },
+    {
+        "amount": 0,
+        "priceMin": 0,
+        "priceMax": 0,
+        "limit": 200
+    },
+    {
+        "amount": 0,
+        "priceMin": 0,
+        "priceMax": 0,
+        "limit": 500
+    },
+    {
+        "amount": 0,
+        "priceMin": 0,
+        "priceMax": 0,
+        "limit": 1000
+    }
+]
