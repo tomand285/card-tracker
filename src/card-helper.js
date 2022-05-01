@@ -33,6 +33,10 @@ async function cardList() {
             console.log(`Working on ${card.url}`)
             let min = parseFloat(card.data.Price[0].split("$")[1])
             let max = card.data.Price[1] ? parseFloat(card.data.Price[1].split("$")[1]) : min
+            if (isNaN(min) && isNaN(max)) {
+                min = 0
+                max = 0
+            }
             card.data.id = i;
             card.data.name = card.url.split("/")[6];
             card.data.url = card.url;
