@@ -1,8 +1,8 @@
-const fs = require('fs')
 const open = require('open');
-const { cardList } = require('./src/card-helper')
-let stats = require("./config/stats.json")
-const currDate = (new Date()).toISOString().replace(/:/g, '_');
+const nodeFlags = require('node-flag');
+const { code } = nodeFlags.getAll();
+const { cardList } = require('./src/card-helper');
+let { stats } = require(`./config/sets/${code}.json`);
 
 (async() => {
     let results = await cardList()
@@ -11,17 +11,8 @@ const currDate = (new Date()).toISOString().replace(/:/g, '_');
     let totalPriceMin = 0;
     let totalPriceMax = 0;
 
-    let writer = async(log) => {
-        console.log(log)
-        try {
-            fs.writeFileSync(`neo-${currDate}.txt`, log + "\n", { flag: 'a+' })
-        } catch (err) {
-            console.error(err)
-        }
-    }
-
     let lookAt = async(card) => {
-        await writer(`ID: ${card.id}, Card: ${card.url}, PriceMin: ${card.PriceMin}, PriceMax: ${card.PriceMax}`);
+        console.log(`ID: ${card.id}, Card: ${card.url}, PriceMin: ${card.PriceMin}, PriceMax: ${card.PriceMax}`);
         //await open(card.TCGPlayer)
     }
 
@@ -33,7 +24,7 @@ const currDate = (new Date()).toISOString().replace(/:/g, '_');
             let stat = stats[j]
 
             if (!j) {
-                //await lookAt(results[i])
+                await lookAt(results[i])
             }
 
             if (results[i].PriceMin < stat.limit) {
@@ -50,8 +41,8 @@ const currDate = (new Date()).toISOString().replace(/:/g, '_');
         stat.priceMax = parseFloat(stat.priceMax.toFixed(2));
     }
 
-    await writer(`Total number of cards left: ${total}`)
-    await writer(`Total priceMin of all cards left: $${totalPriceMin.toFixed( 2 )}`)
-    await writer(`Total priceMx of all cards left: $${totalPriceMax.toFixed( 2 )}`)
+    console.log(`Total number of cards left: ${total}`)
+    console.log(`Total priceMin of all cards left: $${totalPriceMin.toFixed( 2 )}`)
+    console.log(`Total priceMx of all cards left: $${totalPriceMax.toFixed( 2 )}`)
     console.table(stats)
 })()

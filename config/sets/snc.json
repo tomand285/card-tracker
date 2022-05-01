@@ -15,5 +15,60 @@
         400, 401, 402, 403, 404, 405, 406, 409,
         411, 413, 414, 415, 416, 423, 425, 427, 430, 431, 434, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446,
         447, 448, 449, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 463, 464, 465, 466, 467
+    ],
+    "stats": [{
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 1
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 2
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 3
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 4
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 5
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 6
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 7
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 50
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 100
+        }
     ]
 }
