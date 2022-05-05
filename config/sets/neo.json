@@ -11,12 +11,6 @@
             "amount": 0,
             "priceMin": 0,
             "priceMax": 0,
-            "limit": 1
-        },
-        {
-            "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
             "limit": 2
         },
         {
