@@ -20,18 +20,6 @@
             "amount": 0,
             "priceMin": 0,
             "priceMax": 0,
-            "limit": 1
-        },
-        {
-            "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
-            "limit": 2
-        },
-        {
-            "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
             "limit": 3
         },
         {
@@ -69,6 +57,18 @@
             "priceMin": 0,
             "priceMax": 0,
             "limit": 100
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 200
+        },
+        {
+            "amount": 0,
+            "priceMin": 0,
+            "priceMax": 0,
+            "limit": 300
         }
     ]
 }
