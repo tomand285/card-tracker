@@ -13,7 +13,7 @@ let { stats } = require(`./config/sets/${code}.json`);
 
     let lookAt = async(card) => {
         console.log(`ID: ${card.id}, Card: ${card.url}, PriceMin: ${card.PriceMin}, PriceMax: ${card.PriceMax}`);
-        await open(card.TCGPlayer)
+        //await open(card.TCGPlayer)
     }
 
     for (let i = 0; i < total; i++) {
