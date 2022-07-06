@@ -13,37 +13,12 @@
         403, 404,
         441, 442, 446,
         447, 448,
-        452, 453, 457, 458, 459, 460
+        452, 457, 459
     ],
     "stats": [{
-            "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
-            "limit": 10
-        },
-        {
-            "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
-            "limit": 50
-        },
-        {
-            "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
-            "limit": 100
-        },
-        {
-            "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
-            "limit": 200
-        },
-        {
-            "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
-            "limit": 300
-        }
-    ]
+        "amount": 0,
+        "priceMin": 0,
+        "priceMax": 0,
+        "limit": 300
+    }]
 }
