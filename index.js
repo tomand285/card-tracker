@@ -4,6 +4,12 @@ const { code } = nodeFlags.getAll();
 const { cardList } = require('./src/card-helper');
 let { stats } = require(`./config/sets/${code}.json`);
 
+function sleep(ms) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
+  }
+
 (async() => {
     let results = await cardList()
 
@@ -14,6 +20,7 @@ let { stats } = require(`./config/sets/${code}.json`);
     let lookAt = async(card) => {
         console.log(`ID: ${card.id}, Card: ${card.url}, PriceMin: ${card.PriceMin}, PriceMax: ${card.PriceMax}`);
         await open(card.TCGPlayer)
+        await sleep(1000*10)
     }
 
     for (let i = 0; i < total; i++) {
