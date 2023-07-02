@@ -43,6 +43,6 @@ let { stats } = require(`./config/sets/${code}.json`);
 
     console.log(`Total number of cards left: ${total}`)
     console.log(`Total priceMin of all cards left: $${totalPriceMin.toFixed( 2 )}`)
-    console.log(`Total priceMx of all cards left: $${totalPriceMax.toFixed( 2 )}`)
+    console.log(`Total priceMax of all cards left: $${totalPriceMax.toFixed( 2 )}`)
     console.table(stats)
 })()

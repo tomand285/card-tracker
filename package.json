@@ -6,15 +6,17 @@
     "scripts": {
         "start": "npm run need:neo",
         "dev": "nodemon index --mode need --code neo",
-        "numbers": "node numbers.js",
+        "numbers": "node numbers.js 790",
         "need:neo": "node index --mode need --code neo",
         "need:nec": "node index --mode need --code nec",
         "need:snc": "node index --mode need --code snc",
         "need:ncc": "node index --mode need --code ncc",
+        "need:ltr": "node index --mode need --code ltr",
         "have:neo": "node index --mode have --code neo",
         "have:nec": "node index --mode have --code nec",
         "have:snc": "node index --mode have --code snc",
-        "have:ncc": "node index --mode have --code ncc"
+        "have:ncc": "node index --mode have --code ncc",
+        "have:ltr": "node index --mode have --code ltr"
     },
     "keywords": [],
     "author": "",

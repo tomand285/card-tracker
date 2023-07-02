@@ -17,6 +17,9 @@ async function cardFinder(num) {
             .then(function(res) {
                 resolve(JSON.stringify(res, null, 2))
             })
+            .catch((error)=>{
+                console.log(error.message)
+            })
     })
 }
 
