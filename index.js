@@ -19,8 +19,8 @@ function sleep(ms) {
 
     let lookAt = async(card) => {
         console.log(`ID: ${card.id}, Card: ${card.url}, PriceMin: ${card.PriceMin}, PriceMax: ${card.PriceMax}`);
-        await open(card.TCGPlayer)
-        await sleep(1000*10)
+        // await open(card.TCGPlayer)
+        // await sleep(1000*10)
     }
 
     for (let i = 0; i < total; i++) {
