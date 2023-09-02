@@ -10,18 +10,90 @@ async function cardFinder(num) {
                 fields: ['data'],
                 parse: function($) {
                     return {
-                        TCGPlayer: $('#stores > ul > li:nth-child(1) > a:nth-child(1)').attr('href'),
-                        Price: $('.tcgplayer .currency-usd').text().split("✶")
+                        TCGPlayer: $('#stores > ul > li:nth-child(1) > a:nth-child(1)').attr('href')
                     }
                 }
             })
             .then(async function(res) {
                 let tcgPlayerProductId = res.data.TCGPlayer.split("/")[4].split("?")[0]
                 let results = await axios({
-                    method: 'get',
-                    url: `https://mp-search-api.tcgplayer.com/v1/product/${tcgPlayerProductId}/details`
+                    method: 'post',
+                    url: `https://mp-search-api.tcgplayer.com/v1/product/${tcgPlayerProductId}/listings?mpfev=1773`,
+                    data: {
+                        "filters": {
+                            "term": {
+                                "sellerStatus": "Live",
+                                "channelId": 0,
+                                "language": [
+                                    "English"
+                                ],
+                                "direct-seller": true,
+                                "directProduct": true,
+                                "listingType": "standard"
+                            },
+                            "range": {
+                                "quantity": {
+                                    "gte": 1
+                                },
+                                "direct-inventory": {
+                                    "gte": 1
+                                }
+                            },
+                            "exclude": {
+                                "channelExclusion": 0,
+                                "listingType": "custom"
+                            }
+                        },
+                        "from": 0,
+                        "size": 1,
+                        "context": {
+                            "shippingCountry": "US",
+                            "cart": {}
+                        },
+                        "sort": {
+                            "field": "price+shipping",
+                            "order": "asc"
+                        }
+                    }
                   })
-                res.data.marketPrice = results.data.marketPrice
+                if(results.data.results[0].results.length == 0){
+                    results = await axios({
+                        method: 'post',
+                        url: `https://mp-search-api.tcgplayer.com/v1/product/${tcgPlayerProductId}/listings?mpfev=1773`,
+                        data: {
+                            "context": {
+                                "cart": {
+                                },
+                                "shippingCountry": "US"
+                            },
+                            "filters": {
+                                "exclude": {
+                                    "channelExclusion": 0,
+                                    "listingType": "custom"
+                                },
+                                "range": {
+                                    "quantity": {
+                                        "gte": 1
+                                    }
+                                },
+                                "term": {
+                                    "channelId": 0,
+                                    "language": [
+                                        "English"
+                                    ],
+                                    "listingType": "standard",
+                                    "sellerStatus": "Live"
+                                }
+                            },
+                            "from": 0,
+                            "size": 1,
+                            "sort": {
+                                "field": "price+shipping",
+                                "order": "asc"
+                            }
+                        }})
+                }
+                res.data.cardPrice = results.data.results[0].results[0].price
                 resolve(JSON.stringify(res, null, 2))
                
             })
@@ -42,17 +114,9 @@ async function cardList() {
         if (searchCard(i, mode)) {
             let card = JSON.parse(await cardFinder(i));
             console.log(`Working on ${card.url}`)
-            let min = parseFloat(card.data.Price[0].split("$")[1])
-            let max = card.data.Price[1] ? parseFloat(card.data.Price[1].split("$")[1]) : min
-            if (isNaN(min) && isNaN(max)) {
-                min = 0
-                max = 0
-            }
             card.data.id = i;
             card.data.name = card.url.split("/")[6];
             card.data.url = card.url;
-            card.data.PriceMin = Number.isFinite(min) ? min : max
-            card.data.PriceMax = max;
             results.push(card.data);
         }
     }

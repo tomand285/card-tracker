@@ -27,33 +27,58 @@
     "stats": [
         {
             "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
-            "limit": 0.60
+            "cardPrice": 0,
+            "limit": 2
         },
         {
             "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
-            "limit": 0.75
+            "cardPrice": 0,
+            "limit": 3
         },
         {
             "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
-            "limit": 1
+            "cardPrice": 0,
+            "limit": 4
         },
         {
             "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
+            "cardPrice": 0,
             "limit": 5
         },
         {
             "amount": 0,
-            "priceMin": 0,
-            "priceMax": 0,
+            "cardPrice": 0,
             "limit": 10
+        },
+        {
+            "amount": 0,
+            "cardPrice": 0,
+            "limit": 25
+        },
+        {
+            "amount": 0,
+            "cardPrice": 0,
+            "limit": 50
+        },
+        {
+            "amount": 0,
+            "cardPrice": 0,
+            "limit": 100
+        },
+        {
+            "amount": 0,
+            "cardPrice": 0,
+            "limit": 500
+        },
+        {
+            "amount": 0,
+            "cardPrice": 0,
+            "limit": 1000
+        },
+        {
+            "amount": 0,
+            "cardPrice": 0,
+            "limit": 2000
         }
     ]
 }

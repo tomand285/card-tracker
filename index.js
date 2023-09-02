@@ -14,42 +14,37 @@ function sleep(ms) {
     let results = await cardList()
 
     let total = results.length;
-    let totalPriceMin = 0;
-    let totalPriceMax = 0;
+    let totalPrice = 0;
 
     let lookAt = async(card) => {
-        console.log(`ID: ${card.id}, Card: ${card.url}, PriceMin: ${card.PriceMin}, PriceMax: ${card.PriceMax}`);
+        console.log(`ID: ${card.id}, Card: ${card.url}, Price: ${card.cardPrice}`);
         // await open(card.TCGPlayer)
         // await sleep(1000*10)
     }
 
     for (let i = 0; i < total; i++) {
-        totalPriceMin += results[i].PriceMin
-        totalPriceMax += results[i].PriceMax
+        totalPrice += results[i].cardPrice
 
         for (let j = 0; j < stats.length; j++) {
             let stat = stats[j]
 
-            if (results[i].PriceMin < stat.limit) {
+            if (results[i].cardPrice < stat.limit) {
                 if (!j) {
                     await lookAt(results[i])
                 }
 
                 stat.amount++;
-                stat.priceMin += results[i].PriceMin;
-                stat.priceMax += results[i].PriceMax;
+                stat.cardPrice += results[i].cardPrice;
             }
         }
     }
 
     for (let j = 0; j < stats.length; j++) {
         let stat = stats[j]
-        stat.priceMin = parseFloat(stat.priceMin.toFixed(2));
-        stat.priceMax = parseFloat(stat.priceMax.toFixed(2));
+        stat.cardPrice = parseFloat(stat.cardPrice.toFixed(2));
     }
 
     console.log(`Total number of cards left: ${total}`)
-    console.log(`Total priceMin of all cards left: $${totalPriceMin.toFixed( 2 )}`)
-    console.log(`Total priceMax of all cards left: $${totalPriceMax.toFixed( 2 )}`)
+    console.log(`Total price of all cards left: $${totalPrice.toFixed( 2 )}`)
     console.table(stats)
 })()
