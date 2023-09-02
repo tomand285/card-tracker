@@ -1,4 +1,5 @@
 var wtj = require('website-to-json')
+var axios = require('axios')
 const nodeFlags = require('node-flag')
 const { code, mode } = nodeFlags.getAll()
 const { missing_numbers, number_of_cards } = require(`../config/sets/${code}.json`)
@@ -14,8 +15,15 @@ async function cardFinder(num) {
                     }
                 }
             })
-            .then(function(res) {
+            .then(async function(res) {
+                let tcgPlayerProductId = res.data.TCGPlayer.split("/")[4].split("?")[0]
+                let results = await axios({
+                    method: 'get',
+                    url: `https://mp-search-api.tcgplayer.com/v1/product/${tcgPlayerProductId}/details`
+                  })
+                res.data.marketPrice = results.data.marketPrice
                 resolve(JSON.stringify(res, null, 2))
+               
             })
             .catch((error)=>{
                 console.log(error.message)
